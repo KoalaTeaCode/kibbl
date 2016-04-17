@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01403D471CC1EBD100660E71 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01403D461CC1EBD100660E71 /* PetDetailViewController.swift */; };
 		0145BBD21CB9B40D00FBE833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BBD11CB9B40D00FBE833 /* AppDelegate.swift */; };
 		0145BBD41CB9B40D00FBE833 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BBD31CB9B40D00FBE833 /* ViewController.swift */; };
 		0145BBD71CB9B40D00FBE833 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0145BBD51CB9B40D00FBE833 /* Main.storyboard */; };
@@ -21,7 +22,6 @@
 		0145BC0F1CB9B96C00FBE833 /* MatcherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BC0E1CB9B96C00FBE833 /* MatcherViewController.swift */; };
 		0145BC121CB9CAAF00FBE833 /* SavedPetsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BC111CB9CAAF00FBE833 /* SavedPetsCollection.swift */; };
 		0145BC151CB9CC6100FBE833 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BC141CB9CC6100FBE833 /* Pet.swift */; };
-		0145BC171CB9CDDF00FBE833 /* SavedPetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BC161CB9CDDF00FBE833 /* SavedPetsTableViewController.swift */; };
 		0145BC191CB9CE1300FBE833 /* SavedPetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BC181CB9CE1300FBE833 /* SavedPetsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01403D461CC1EBD100660E71 /* PetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
 		0145BBCE1CB9B40D00FBE833 /* Kibbl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kibbl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0145BBD11CB9B40D00FBE833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0145BBD31CB9B40D00FBE833 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		0145BC101CB9BB1300FBE833 /* Kibbl-Bridging-Head.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kibbl-Bridging-Head.h"; sourceTree = "<group>"; };
 		0145BC111CB9CAAF00FBE833 /* SavedPetsCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPetsCollection.swift; sourceTree = "<group>"; };
 		0145BC141CB9CC6100FBE833 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
-		0145BC161CB9CDDF00FBE833 /* SavedPetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPetsTableViewController.swift; sourceTree = "<group>"; };
 		0145BC181CB9CE1300FBE833 /* SavedPetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPetsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				0145BC0E1CB9B96C00FBE833 /* MatcherViewController.swift */,
-				0145BC161CB9CDDF00FBE833 /* SavedPetsTableViewController.swift */,
 				0145BC181CB9CE1300FBE833 /* SavedPetsViewController.swift */,
+				01403D461CC1EBD100660E71 /* PetDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 				0145BBD21CB9B40D00FBE833 /* AppDelegate.swift in Sources */,
 				0145BC091CB9B8BF00FBE833 /* DraggableView.m in Sources */,
 				0145BC121CB9CAAF00FBE833 /* SavedPetsCollection.swift in Sources */,
-				0145BC171CB9CDDF00FBE833 /* SavedPetsTableViewController.swift in Sources */,
+				01403D471CC1EBD100660E71 /* PetDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,8 +11,10 @@ import UIKit
 class Pet: NSObject {
     
     var name: String?
+    var adoptLink: String?
     
-    init(name: String) {
+    init(name: String, adoptLink: String) {
         self.name = name
+        self.adoptLink = adoptLink
     }
 }

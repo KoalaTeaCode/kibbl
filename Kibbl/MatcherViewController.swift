@@ -26,9 +26,9 @@ class MatcherViewController: UIViewController, DraggableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exampleCardLabels.append(Pet(name: "Izzy"))
-        exampleCardLabels.append(Pet(name: "Pepper"))
-        exampleCardLabels.append(Pet(name: "Cici"))
+        exampleCardLabels.append(Pet(name: "Izzy", adoptLink: "https://www.petfinder.com/petdetail/34902597"))
+        exampleCardLabels.append(Pet(name: "Pepper", adoptLink: "https://www.petfinder.com/petdetail/34902597"))
+        exampleCardLabels.append(Pet(name: "Cici", adoptLink: "https://www.petfinder.com/petdetail/34902597"))
         
         loadCards()
         // Do any additional setup after loading the view.

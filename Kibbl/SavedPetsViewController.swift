@@ -13,6 +13,7 @@ class SavedPetsViewController: UIViewController,
     UITableViewDataSource{
     
     let savedPetsCollection: SavedPetsCollection = SavedPetsCollection.sharedInstance
+    var selectedPet: Pet? = nil
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,15 +31,21 @@ class SavedPetsViewController: UIViewController,
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(cell)
+        selectedPet = savedPetsCollection.savedPets[indexPath!.row]
+        
         // Get the new view controller using segue.destinationViewController.
+        let vc = segue.destinationViewController as! PetDetailViewController
         // Pass the selected object to the new view controller.
+        vc.selectedPet = selectedPet
     }
-    */
+ 
     
     // MARK: - Table view data source
     
@@ -52,6 +59,7 @@ class SavedPetsViewController: UIViewController,
         return savedPetsCollection.savedPets.count
     }
     
+    // MARK - Table view delegate
     
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -62,6 +70,11 @@ class SavedPetsViewController: UIViewController,
         cell.textLabel!.text = pet.name
          
          return cell
+    }
+    
+    func tableView(tableView: UITableView,
+                   didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedPet = savedPetsCollection.savedPets[indexPath.row]
     }
  
     
