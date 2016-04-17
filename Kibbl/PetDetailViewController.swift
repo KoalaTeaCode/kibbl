@@ -40,6 +40,12 @@ class PetDetailViewController: UIViewController {
         }
     }
 
+    @IBAction func adoptButtonLink(sender: AnyObject) {
+        if let url = NSURL(string: (selectedPet?.adoptLink)!) {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

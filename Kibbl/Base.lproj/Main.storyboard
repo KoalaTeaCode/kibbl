@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Saved Pets View Controller-->
         <scene sceneID="skv-pt-otG">
             <objects>
                 <viewController id="bJ6-Wy-KMb" customClass="SavedPetsViewController" customModule="Kibbl" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,14 +22,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="reuseIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="zEV-TV-fI1">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zEV-TV-fI1" id="fG4-4s-Pue">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="fZU-54-y5X" kind="show" id="7M4-Kp-5B3"/>
+                                            <segue destination="fZU-54-y5X" kind="showDetail" animates="NO" action="showViewController:sender:" id="7M4-Kp-5B3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -43,14 +43,14 @@
                             <constraint firstItem="80C-6v-Dza" firstAttribute="leading" secondItem="2nu-7S-2Oo" secondAttribute="leading" id="pSg-dn-Rlv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Z5D-1G-Sfd"/>
+                    <navigationItem key="navigationItem" id="1pK-hj-Fgq"/>
                     <connections>
                         <outlet property="tableView" destination="80C-6v-Dza" id="GPN-Rh-82G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwD-Fj-Jmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="1583"/>
+            <point key="canvasLocation" x="1877" y="1583"/>
         </scene>
         <!--Pet Detail View Controller-->
         <scene sceneID="pgd-bL-gc9">
@@ -72,43 +72,48 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="aar-Gy-bh8" firstAttribute="centerX" secondItem="yYt-5x-DdT" secondAttribute="centerX" id="JTb-IL-ea8"/>
+                                    <constraint firstItem="aar-Gy-bh8" firstAttribute="centerY" secondItem="yYt-5x-DdT" secondAttribute="centerY" id="4rL-Ho-YoB"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neI-gJ-9vN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neI-gJ-9vN">
                                 <rect key="frame" x="198" y="318" width="213" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="N7q-QM-X1X"/>
-                                    <constraint firstAttribute="width" constant="213" id="wgE-7w-b1n"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVc-B5-Oqc">
-                                <rect key="frame" x="183" y="434" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10Y-1N-dul">
-                                <rect key="frame" x="368" y="434" width="40" height="30"/>
-                                <state key="normal" title="Share"/>
-                                <connections>
-                                    <action selector="shareButton:" destination="fZU-54-y5X" eventType="touchUpInside" id="hWy-Wm-yol"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxF-LT-8Bx">
+                                <rect key="frame" x="226" y="423" width="145" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVc-B5-Oqc">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
+                                        <state key="normal" title="Adopt"/>
+                                        <connections>
+                                            <action selector="adoptButtonLink:" destination="fZU-54-y5X" eventType="touchUpInside" id="iT1-uC-5Pp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10Y-1N-dul">
+                                        <rect key="frame" x="42" y="0.0" width="103" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="FZE-D2-8kM"/>
+                                        </constraints>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareButton:" destination="fZU-54-y5X" eventType="touchUpInside" id="hWy-Wm-yol"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="yYt-5x-DdT" secondAttribute="trailing" id="1JC-Gy-8Mn"/>
-                            <constraint firstItem="WOq-yS-CK6" firstAttribute="top" secondItem="VVc-B5-Oqc" secondAttribute="bottom" constant="87" id="FMO-Ez-A6H"/>
-                            <constraint firstItem="neI-gJ-9vN" firstAttribute="trailing" secondItem="10Y-1N-dul" secondAttribute="trailing" id="UwL-pW-zHT"/>
-                            <constraint firstItem="yYt-5x-DdT" firstAttribute="top" secondItem="iZd-Gf-Tr0" secondAttribute="top" id="cIj-oo-68U"/>
-                            <constraint firstItem="neI-gJ-9vN" firstAttribute="top" secondItem="yYt-5x-DdT" secondAttribute="bottom" constant="37" id="dHD-di-hFs"/>
-                            <constraint firstItem="VVc-B5-Oqc" firstAttribute="baseline" secondItem="10Y-1N-dul" secondAttribute="baseline" id="dRZ-a0-kOb"/>
-                            <constraint firstItem="VVc-B5-Oqc" firstAttribute="leading" secondItem="iZd-Gf-Tr0" secondAttribute="leading" constant="183" id="eUp-RV-lju"/>
-                            <constraint firstItem="neI-gJ-9vN" firstAttribute="leading" secondItem="iZd-Gf-Tr0" secondAttribute="leading" constant="198" id="gHk-Qd-ydO"/>
-                            <constraint firstItem="VVc-B5-Oqc" firstAttribute="top" secondItem="neI-gJ-9vN" secondAttribute="bottom" constant="62" id="nHl-kd-G22"/>
-                            <constraint firstItem="yYt-5x-DdT" firstAttribute="leading" secondItem="iZd-Gf-Tr0" secondAttribute="leading" id="zbz-3k-gA5"/>
+                            <constraint firstItem="xxF-LT-8Bx" firstAttribute="centerX" secondItem="neI-gJ-9vN" secondAttribute="centerX" id="3EY-i5-VbW"/>
+                            <constraint firstItem="xxF-LT-8Bx" firstAttribute="top" secondItem="neI-gJ-9vN" secondAttribute="bottom" constant="51" id="6Kl-Ms-4Nq"/>
+                            <constraint firstItem="yYt-5x-DdT" firstAttribute="leading" secondItem="iZd-Gf-Tr0" secondAttribute="leading" id="KxE-2D-ygp"/>
+                            <constraint firstItem="WOq-yS-CK6" firstAttribute="top" secondItem="neI-gJ-9vN" secondAttribute="bottom" constant="179" id="MFJ-AL-M7e"/>
+                            <constraint firstItem="neI-gJ-9vN" firstAttribute="centerX" secondItem="aar-Gy-bh8" secondAttribute="centerX" constant="4.5" id="Oru-GC-6xo"/>
+                            <constraint firstAttribute="trailing" secondItem="yYt-5x-DdT" secondAttribute="trailing" id="Rzd-oY-26I"/>
+                            <constraint firstItem="yYt-5x-DdT" firstAttribute="top" secondItem="iZd-Gf-Tr0" secondAttribute="top" id="fEa-R3-fCG"/>
+                            <constraint firstAttribute="bottom" secondItem="yYt-5x-DdT" secondAttribute="bottom" constant="319" id="lTr-LD-KZC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -117,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Gl-oQ-eh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="1583"/>
+            <point key="canvasLocation" x="2580" y="1583"/>
         </scene>
         <!--Item-->
         <scene sceneID="NyJ-JY-LeH">
@@ -189,13 +194,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="itJ-qg-7mr" kind="relationship" relationship="viewControllers" id="QkK-pD-4EF"/>
-                        <segue destination="bJ6-Wy-KMb" kind="relationship" relationship="viewControllers" id="432-cD-h5Q"/>
+                        <segue destination="Cf0-9j-VCh" kind="relationship" relationship="viewControllers" id="432-cD-h5Q"/>
                         <segue destination="HDf-Ec-JNf" kind="relationship" relationship="viewControllers" id="9Ge-U8-vz1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flg-Ay-R0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="1253"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="ZNp-ha-o9V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cf0-9j-VCh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Z5D-1G-Sfd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nOm-eo-o3w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bJ6-Wy-KMb" kind="relationship" relationship="rootViewController" id="QA0-gs-Lvy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyT-Dy-EeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="1583"/>
         </scene>
     </scenes>
 </document>
