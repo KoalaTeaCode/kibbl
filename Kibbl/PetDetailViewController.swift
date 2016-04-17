@@ -12,12 +12,15 @@ class PetDetailViewController: UIViewController {
     
     var selectedPet: Pet? = nil
     @IBOutlet weak var petNameLabel: UILabel!
-
+    @IBOutlet weak var petImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         petNameLabel.text = selectedPet!.name
+        petImageView.downloadedFrom(link: (selectedPet?.image)!, contentMode: .ScaleAspectFit)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +48,7 @@ class PetDetailViewController: UIViewController {
             UIApplication.sharedApplication().openURL(url)
         }
     }
+   
     
     /*
     // MARK: - Navigation

@@ -27,6 +27,7 @@
 
 @synthesize panGestureRecognizer;
 @synthesize information;
+@synthesize imageView;
 @synthesize overlayView;
 
 - (id)initWithFrame:(CGRect)frame
@@ -35,14 +36,16 @@
     if (self) {
         [self setupView];
         
-#warning placeholder stuff, replace with card-specific information {
-        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
+        //@TODO: Make this a nib?
+        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 310, self.frame.size.width, 100)];
         information.text = @"no info given";
         [information setTextAlignment:NSTextAlignmentCenter];
         information.textColor = [UIColor blackColor];
         
+        imageView =[[UIImageView alloc] initWithFrame:CGRectMake(0, 10, self.frame.size.width, 300)];
+        
         self.backgroundColor = [UIColor whiteColor];
-#warning placeholder stuff, replace with card-specific information }
+
         
         
         
@@ -50,6 +53,7 @@
         
         [self addGestureRecognizer:panGestureRecognizer];
         [self addSubview:information];
+        [self addSubview:imageView];
         
         overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
         overlayView.alpha = 0;
@@ -168,8 +172,6 @@
                      }];
     
     [delegate cardSwipedRight:self];
-    
-    NSLog(@"YES");
 }
 
 //%%% called when a swip exceeds the ACTION_MARGIN to the left
@@ -184,8 +186,6 @@
                      }];
     
     [delegate cardSwipedLeft:self];
-    
-    NSLog(@"NO");
 }
 
 -(void)rightClickAction
@@ -200,8 +200,6 @@
                      }];
     
     [delegate cardSwipedRight:self];
-    
-    NSLog(@"YES");
 }
 
 -(void)leftClickAction
@@ -216,8 +214,6 @@
                      }];
     
     [delegate cardSwipedLeft:self];
-    
-    NSLog(@"NO");
 }
 
 

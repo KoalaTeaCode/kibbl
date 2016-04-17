@@ -23,6 +23,7 @@
 		0145BC121CB9CAAF00FBE833 /* SavedPetsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BC111CB9CAAF00FBE833 /* SavedPetsCollection.swift */; };
 		0145BC151CB9CC6100FBE833 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BC141CB9CC6100FBE833 /* Pet.swift */; };
 		0145BC191CB9CE1300FBE833 /* SavedPetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0145BC181CB9CE1300FBE833 /* SavedPetsViewController.swift */; };
+		01489AAC1CC439F000EE3E1A /* ImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01489AAB1CC439F000EE3E1A /* ImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		0145BC111CB9CAAF00FBE833 /* SavedPetsCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPetsCollection.swift; sourceTree = "<group>"; };
 		0145BC141CB9CC6100FBE833 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		0145BC181CB9CE1300FBE833 /* SavedPetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPetsViewController.swift; sourceTree = "<group>"; };
+		01489AAB1CC439F000EE3E1A /* ImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				0145BC101CB9BB1300FBE833 /* Kibbl-Bridging-Head.h */,
+				01489AAD1CC439F500EE3E1A /* Services */,
 				0145BC131CB9CAB500FBE833 /* Models */,
 				0145BC0B1CB9B8D800FBE833 /* Views */,
 				0145BBFF1CB9B51B00FBE833 /* Controllers */,
@@ -182,6 +185,14 @@
 				0145BC141CB9CC6100FBE833 /* Pet.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		01489AAD1CC439F500EE3E1A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01489AAB1CC439F000EE3E1A /* ImageViewExtensions.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 			files = (
 				0145BC081CB9B8BF00FBE833 /* DraggableViewBackground.m in Sources */,
 				0145BC0A1CB9B8BF00FBE833 /* OverlayView.m in Sources */,
+				01489AAC1CC439F000EE3E1A /* ImageViewExtensions.swift in Sources */,
 				0145BC0F1CB9B96C00FBE833 /* MatcherViewController.swift in Sources */,
 				0145BC151CB9CC6100FBE833 /* Pet.swift in Sources */,
 				0145BC011CB9B77400FBE833 /* SwipeView.swift in Sources */,

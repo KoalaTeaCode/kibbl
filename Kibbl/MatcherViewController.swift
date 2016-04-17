@@ -26,9 +26,9 @@ class MatcherViewController: UIViewController, DraggableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exampleCardLabels.append(Pet(name: "Izzy", adoptLink: "https://www.petfinder.com/petdetail/34902597"))
-        exampleCardLabels.append(Pet(name: "Pepper", adoptLink: "https://www.petfinder.com/petdetail/34902597"))
-        exampleCardLabels.append(Pet(name: "Cici", adoptLink: "https://www.petfinder.com/petdetail/34902597"))
+        exampleCardLabels.append(Pet(name: "Izzy", adoptLink: "https://www.petfinder.com/petdetail/34902597", image: "https://drpem3xzef3kf.cloudfront.net/photos/pets/34795383/1/?bust=1459379902&width=632&no_scale_up=1"))
+        exampleCardLabels.append(Pet(name: "Pepper", adoptLink: "https://www.petfinder.com/petdetail/34902597", image: "https://drpem3xzef3kf.cloudfront.net/photos/pets/34795383/1/?bust=1459379902&width=632&no_scale_up=1"))
+        exampleCardLabels.append(Pet(name: "Cici", adoptLink: "https://www.petfinder.com/petdetail/34902597", image: "https://drpem3xzef3kf.cloudfront.net/photos/pets/34795383/1/?bust=1459379902&width=632&no_scale_up=1"))
         
         loadCards()
         // Do any additional setup after loading the view.
@@ -41,12 +41,10 @@ class MatcherViewController: UIViewController, DraggableViewDelegate {
     
     //Mark: Draggable View Delegate
     func cardSwipedLeft(card: UIView) {
-        print(allCards)
         currentIndex += 1
     }
     
     func cardSwipedRight(card: UIView) {
-        print(allCards)
         savedPetsCollection.savedPets.append(exampleCardLabels[currentIndex])
         currentIndex += 1
     }
@@ -99,6 +97,7 @@ class MatcherViewController: UIViewController, DraggableViewDelegate {
         let draggableView: DraggableView = DraggableView(frame: rectangle)
         
         draggableView.information.text = exampleCardLabels[index].name;
+        draggableView.imageView.downloadedFrom(link: (exampleCardLabels[index].image)!, contentMode: .ScaleAspectFit)
         draggableView.delegate = self;
     
         return draggableView;

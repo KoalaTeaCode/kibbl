@@ -117,6 +117,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="petImageView" destination="aar-Gy-bh8" id="LDd-Kr-k7k"/>
                         <outlet property="petNameLabel" destination="neI-gJ-9vN" id="ijL-PF-AkC"/>
                     </connections>
                 </viewController>
